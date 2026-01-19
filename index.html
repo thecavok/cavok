@@ -1,30 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
+    <title>Under Construction | High-Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
+
+        /* Zero out margins to ensure full-screen coverage */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0b; /* Dark Tech Background */
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden; /* No scrollbars */
+        }
+
+        /* The Main Container */
+        .maintenance-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding-top: 15%;
+            background: radial-gradient(circle at center, #1a1a1f 0%, #000000 100%);
+            position: relative;
         }
+
+        /* High-tech glow effect in the background */
+        .maintenance-container::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #007AFF;
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .content {
+            z-index: 1;
+            padding: 20px;
+        }
+
+        /* Tech Header */
         h1 {
-            font-size: 3em;
-            color: #333;
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #007AFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
         }
+
+        /* Subtext */
         p {
-            font-size: 1.2em;
-            color: #666;
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            color: #888;
+            max-width: 700px;
+            line-height: 1.6;
+            font-weight: 300;
         }
+
+        /* Animated Progress Bar (Visual Filler) */
+        .progress-box {
+            margin-top: 50px;
+            width: 300px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 40%;
+            height: 100%;
+            background: #007AFF;
+            box-shadow: 0 0 15px #007AFF;
+            animation: slide 2s infinite ease-in-out;
+        }
+
+        @keyframes slide {
+            0% { left: -40%; }
+            100% { left: 100%; }
+        }
+
+        .status-tag {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #007AFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
     </style>
+	
 </head>
 <body>
-    <h1>Under Construction</h1>
-    <p>Our website is currently under construction. Please check back soon!</p>
+
+    <div class="maintenance-container">
+        <div class="content">
+            <h1>Site Under Construction</h1>
+            <p>We are currently upgrading our systems to provide you with a superior digital experience. We will be back online shortly.</p>
+            
+            <div class="progress-box">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="status-tag">System Optimization in Progress...</div>
+        </div>
+    </div>
+
 </body>
 </html>
-``
